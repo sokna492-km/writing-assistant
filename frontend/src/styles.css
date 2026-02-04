@@ -1,0 +1,210 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #f5f6f8;
+  color: #101828;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 24px;
+  padding: 32px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(16, 24, 40, 0.08);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  color: #667085;
+  margin: 0 0 6px;
+}
+
+.mode-select {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.mode-select select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  background: #f9fafb;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+  flex: 1;
+}
+
+.panel {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(16, 24, 40, 0.08);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.panel-header h2 {
+  margin: 0;
+}
+
+.editor textarea {
+  width: 100%;
+  min-height: 360px;
+  border-radius: 12px;
+  border: 1px solid #eaecf0;
+  padding: 16px;
+  font-family: "Fira Code", monospace;
+  background: #f9fafb;
+}
+
+.editor-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #667085;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.tab-buttons button {
+  flex: 1;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+.tab-buttons button.active {
+  background: #101828;
+  color: white;
+}
+
+.tab-body {
+  background: #f8f9fb;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #eaecf0;
+}
+
+.tab-body ul {
+  padding-left: 20px;
+}
+
+.action-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  background: #175cd3;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.ghost {
+  background: transparent;
+  color: #175cd3;
+  border: 1px solid #c7d7fe;
+}
+
+.mode-pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #eef4ff;
+  color: #3538cd;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.challenge {
+  background: #111827;
+  color: white;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.challenge-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.challenge-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 16px;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.challenge-content ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.challenge-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 960px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .challenge-box {
+    flex-direction: column;
+  }
+}
